@@ -8,7 +8,7 @@ int main()
 	cout<<"Enter Number of Processes : ";
 	int p;
 	cin>>p;
-	//vector declaration with initial values 0 of size p
+	//vector declaration with initial values 0 of size p for more insights on vectors visit www.cppreference.com
 	vector<int> processes(p,0);
 	vector<int> wt(p,0);
 	vector<int> tat(p,0);
@@ -16,6 +16,7 @@ int main()
 	f(i,p) cout<<processes[i];
 	vector<int> burst(p);
 	f(i,p) cin>>burst[i];
+	//take the time quantum input
 	cout<<"Enter Time Quantum : ";
 	int tq;
 	cin>>tq;
