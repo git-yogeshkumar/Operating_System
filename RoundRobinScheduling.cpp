@@ -1,4 +1,12 @@
 //Round Robin Scheduling.
+/*Round robin is designed specifically for time sharing systems. 
+It is similar to first come first serve scheduling algorithm but the preemption is the added
+functionality to switch between the processes.
+A small unit of time also known as time slice or quantum is set/defined.
+CPU makes sure, time slices ( any natural number ) are assigned  to each process in equal portions
+and in circular order , dealing with all process without any priority.
+The RR Scheduling Algorithm is Starvation Free, i.e no process is left waiting for its turn to be executed by the CPU .*/
+
 #include<bits/stdc++.h>
 //macro defination for "for loop"
 #define f(i,n) for(int i=0;i<n;i++)
