@@ -44,7 +44,7 @@ int main(){
 	cout<<endl;
 	cout<<"Arrival Time			Burst Time		 Wating Time		Turn Around Time"<<endl;
 	f(i,p)cout<<atbt[i].first<<"		"<<atbt[i].second<<"		"<<wt[i]<<"		"<<tat[i]<<endl;
-	cout<<"Average Waiting Time : "<(float)<wt_total/(float)p<<endl;
+	cout<<"Average Waiting Time : "<<(float)wt_total/(float)p<<endl;
 	cout<<"Average Turn Around Time : "<<((float)tat_total/(float)p);
 }
 
