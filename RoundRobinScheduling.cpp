@@ -1,4 +1,4 @@
-//standard c++ library
+//Round Robin Scheduling.
 #include<bits/stdc++.h>
 //macro defination for "for loop"
 #define f(i,n) for(int i=0;i<n;i++)
@@ -8,19 +8,19 @@ int main()
 	cout<<"Enter Number of Processes : ";
 	int p;
 	cin>>p;
-	//vector declaration with initial values 0 of size p for more insights on vectors visit www.cppreference.com
+	//vector declaration with initial values 0 of size p
 	vector<int> processes(p,0);
-	vector<int> wt(p,0);
-	vector<int> tat(p,0);
+	vector<int> wt(p,0); //vector to store waiting time
+	vector<int> tat(p,0); //vector to store turn around time
 	f(i,p)processes[i]=i+1;
 	f(i,p) cout<<processes[i];
-	vector<int> burst(p);
+	vector<int> burst(p); //vector to store burst time
 	f(i,p) cin>>burst[i];
 	//take the time quantum input
 	cout<<"Enter Time Quantum : ";
 	int tq;
 	cin>>tq;
-	vector<int> rbt(p);
+	vector<int> rbt(p); //vector to store remaining burst time
 	f(i,p) rbt[i] = burst[i];
 	int t=0;
 	while (1)
@@ -28,18 +28,18 @@ int main()
         bool flg = true;
         f(i,p)
         {
-            if (rbt[i] > 0)
+            if (rbt[i] > 0) //If there is some burst time remaining for the process we need to further consider it.
             {
                 flg = false;
                 if (rbt[i] > tq)
                 {
                     t += tq;
-                    rbt[i] -= tq;
+                    rbt[i] -= tq; // Remaining burst time = Remaining burst time - Time quantum for which it ran 
                 }
                 else
                 {
                     t = t + rbt[i];
-                    wt[i] = t - burst[i];
+                    wt[i] = t - burst[i]; //Waiting time calculation
                     rbt[i] = 0;
                 }
             }
@@ -48,7 +48,7 @@ int main()
           break;
     }
     int total_wt=0, total_tat=0;
-    f(i,p) tat[i]=burst[i]+wt[i];
+    f(i,p) tat[i]=burst[i]+wt[i]; // turn around time calculation
     f(i,p){
     	total_wt = total_wt+wt[i];
     	total_tat = total_tat+tat[i];
