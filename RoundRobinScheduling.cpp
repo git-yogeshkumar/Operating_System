@@ -13,7 +13,6 @@ int main()
 	vector<int> wt(p,0); //vector to store waiting time
 	vector<int> tat(p,0); //vector to store turn around time
 	f(i,p)processes[i]=i+1;
-	f(i,p) cout<<processes[i];
 	vector<int> burst(p); //vector to store burst time
 	f(i,p) cin>>burst[i];
 	//take the time quantum input
