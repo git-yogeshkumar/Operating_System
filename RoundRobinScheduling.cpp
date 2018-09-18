@@ -29,10 +29,10 @@ int main()
 	cin>>tq;
 	vector<int> rbt(p); //vector to store remaining burst time
 	f(i,p) rbt[i] = burst[i];
-	int t=0;
+	int t=0; //time variable initialized to zero
 	while (1)
     {
-        bool flg = true;
+        bool flg = true;// flag variable used later to break form while loop
         f(i,p)
         {
             if (rbt[i] > 0) //If there is some burst time remaining for the process we need to further consider it.
