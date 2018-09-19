@@ -1,6 +1,7 @@
 package producerconsumer;
 import java.util.Scanner;
 class producer_consumer{
+     //semaphores
      int x=1;
      int e=5;
      int f=0;
