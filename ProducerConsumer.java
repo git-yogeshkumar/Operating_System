@@ -1,3 +1,4 @@
+//This depicts a Producer Consumer Problem Solved without using threads, which means the user controls the processes.
 package producerconsumer;
 import java.util.Scanner;
 class producer_consumer{
